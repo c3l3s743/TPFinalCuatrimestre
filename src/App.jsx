@@ -2,6 +2,7 @@ import { Component } from 'react'
 import axios from 'axios';
 import './App.css'
 import Login from './Componentes/Login';
+import Login from './Componentes/SignIn';
 
 export default class App extends Component {
   constructor (props){

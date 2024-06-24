@@ -45,7 +45,7 @@ export default class Login extends Component {
                     placeholder="Contraseña"
                      />
                     <button type="button" onClick={this.Enviar}>Iniciar Sesion</button>
-                    
+                    <p>¿no tienes una cuenta?</p> <a href="">Registrate</a>
                 </form>
             </section>
         );
