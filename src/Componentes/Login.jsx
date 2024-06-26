@@ -30,7 +30,7 @@ export default class Login extends Component {
 
         return (
             <section>
-                <h1>Login</h1>
+                <h1>Iniciar Sesion</h1>
                 <form className="formulario" onSubmit={this.Enviar}>
                     <input 
                     type="text" 
@@ -45,7 +45,7 @@ export default class Login extends Component {
                     placeholder="Contraseña"
                      />
                     <button type="button" onClick={this.Enviar}>Iniciar Sesion</button>
-                    <p>¿no tienes una cuenta?</p> <a href="">Registrate</a>
+                    <p>¿no tienes una cuenta?</p> <a href="SignIn.jsx">Registrate</a>
                 </form>
             </section>
         );
