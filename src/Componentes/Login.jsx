@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 
 export default class Login extends Component {
     constructor(props) {
@@ -6,8 +6,7 @@ export default class Login extends Component {
         this.state = {
             nombre:'',
             contraseña:''
-           
-        }
+        };
     }
 
     CambiarNombre = (e) => {
@@ -19,33 +18,32 @@ export default class Login extends Component {
     }
     
     Enviar = (e) =>{
-    
+        e.preventDefault();
         const { nombre, contraseña } = this.state;
 
-         console.log("Nombre de usuario:", this.state.nombre);
-         console.log("Contraseña:", this.state.contraseña);
-        //Mensaje para meli, esto despues lo quito, es solo para comprobar que la informacion se esta enviando de manera correcta
+        console.log("Nombre de usuario:", nombre);
+        console.log("Contraseña:", contraseña);
     }
-    render() {
 
+    render() {
         return (
             <section>
-                <h1>Iniciar Sesion</h1>
+                <h1>Iniciar Sesión</h1>
                 <form className="formulario" onSubmit={this.Enviar}>
                     <input 
-                    type="text" 
-                    value={this.state.nombre} 
-                    onChange={this.CambiarNombre}
-                    placeholder="Nombre de usuario"
-                   />
+                        type="text" 
+                        value={this.state.nombre} 
+                        onChange={this.CambiarNombre}
+                        placeholder="Nombre de usuario"
+                    />
                     <input 
-                    type="password" 
-                    value={this.state.contraseña}
-                    onChange={this.CambiarContraseña}
-                    placeholder="Contraseña"
-                     />
-                    <button type="button" onClick={this.Enviar}>Iniciar Sesion</button>
-                    <p>¿no tienes una cuenta?</p> <a href="SignIn.jsx">Registrate</a>
+                        type="password" 
+                        value={this.state.contraseña}
+                        onChange={this.CambiarContraseña}
+                        placeholder="Contraseña"
+                    />
+                    <button type="submit">Iniciar Sesión</button>
+                    <p>¿No tienes una cuenta?</p> <a href="/signin">Regístrate</a>
                 </form>
             </section>
         );

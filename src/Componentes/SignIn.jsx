@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class Login extends Component {
+export default class SignIn extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,6 +27,9 @@ export default class Login extends Component {
         console.log("Correo electrónico:", correo);
         console.log("Contraseña:", contraseña);
 
+        // Simular un registro exitoso (aquí podrías hacer una llamada a API real)
+        // Llamar a la función onSignIn desde props para indicar que el registro fue exitoso
+        this.props.onSignIn();
     }
 
     render() {
